@@ -298,7 +298,7 @@ CodeTree::generate_template_add_type_cxx(std::ostream& o,
                << " jlModule.add_type<" << add_type_param
                << ">(\""    << typename_jl << "\");\n";
 
-  gen_apply_stl(o, 2, type_rcd, add_type_param);
+  // gen_apply_stl(o, 2, type_rcd, add_type_param);
 
   indent(o, 2) <<  "type_ = std::unique_ptr<jlcxx::TypeWrapper<"
                << add_type_param << ">>(new jlcxx::TypeWrapper<"
@@ -546,7 +546,7 @@ CodeTree::generate_non_template_add_type_cxx(std::ostream& o,
 
   o << ");\n";
 
-  gen_apply_stl(o, 2, type_rcd, add_type_param);
+  // gen_apply_stl(o, 2, type_rcd, add_type_param);
 
   indent(o, 2) <<  "type_ = std::unique_ptr<jlcxx::TypeWrapper<"
                << add_type_param << ">>(new jlcxx::TypeWrapper<"
