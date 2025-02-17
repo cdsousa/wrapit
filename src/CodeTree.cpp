@@ -2938,19 +2938,19 @@ CodeTree::gen_apply_stl(std::ostream& o, int indent_depth,
                         const std::string& add_type_param) const{
 
   if(type_rcd.stl){
-    indent(o, indent_depth) << "jlcxx::stl::apply_stl<" << add_type_param
+    indent(o, indent_depth) << "//DISABLED jlcxx::stl::apply_stl<" << add_type_param
                             << ">(jlModule);\n";
   }
   if(type_rcd.stl_const){
-    indent(o, indent_depth) << "jlcxx::stl::apply_stl<const " << add_type_param
+    indent(o, indent_depth) << "//DISABLED jlcxx::stl::apply_stl<const " << add_type_param
                             << ">(jlModule);\n";
   }
   if(type_rcd.stl_ptr){
-    indent(o, indent_depth) << "jlcxx::stl::apply_stl<" << add_type_param << "*"
+    indent(o, indent_depth) << "//DISABLED jlcxx::stl::apply_stl<" << add_type_param << "*"
                             << ">(jlModule);\n";
   }
   if(type_rcd.stl_const_ptr){
-    indent(o, indent_depth) << "jlcxx::stl::apply_stl<const " << add_type_param
+    indent(o, indent_depth) << "//DISABLED jlcxx::stl::apply_stl<const " << add_type_param
                             << "*>(jlModule);\n";
   }
 
